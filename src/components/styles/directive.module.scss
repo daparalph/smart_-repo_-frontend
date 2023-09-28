@@ -1,0 +1,100 @@
+.container {
+  line-height: 2rem;
+  width: 80%;
+  margin: 5rem auto;
+
+  h3 {
+    line-height: 2.5rem;
+    padding: 2rem 0;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  table {
+    margin: 0.5rem;
+  }
+}
+
+// Styles for Regulations page
+.container {
+  .midContainer {
+    width: 100%;
+    padding-top: 1.5rem;
+
+    &:nth-of-type(2) {
+      margin: 2rem 0;
+      border-top: 1px solid #777;
+      padding-top: 1rem;
+
+      .divider {
+        position: relative;
+        margin-top: 1.5rem;
+
+        .list::before {
+          position: relative;
+          content: url("../../assets/line.png");
+          width: 1rem;
+          top: -0.4rem;
+          padding-right: 0.5rem;
+        }
+
+        .list:hover {
+          color: #777;
+        }
+      }
+    }
+
+    .titleThree {
+      font-weight: 600;
+      font-size: 2.5vw;
+      padding: 1rem 0;
+    }
+
+    .article {
+      margin-top: 2rem;
+
+      a {
+        display: block;
+        margin-top: 1rem;
+        color: #0080ff;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 70%;
+    }
+  }
+
+  h1 {
+    line-height: 3rem;
+    font-size: 2rem;
+    text-align: left;
+    text-transform: capitalize;
+    padding: 2rem 0;
+  }
+}
+
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 1.25rem;
+  background: #07777e;
+  width: 100%;
+
+
+  .footerText {
+    color: #fff;
+    font-size: 1.25rem;
+  }    
+}
+
+.footerTextB {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerTextC {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

@@ -1,0 +1,282 @@
+.container {
+  width: 100%;
+
+  .heroImage {
+    width: 100%;
+
+    img.jombotron {
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        height: 60vh;
+        object-fit: cover;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 5rem;
+      width: 80%;
+      margin: 6rem auto;
+
+      .heroCard {
+        justify-content: start;
+        align-items: start;
+
+        h2 {
+          text-align: left;
+          line-height: 2.2rem;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  .force {
+    h3.h2 {
+      text-align: center;
+      max-width: 50%;
+    }
+  }
+
+  .button,
+  a.button {
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 75%;
+    text-align: center;
+    margin: 1.25rem auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #06a1ab;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #001e1d;
+      color: #fff;
+    }
+
+    &:active{
+      opacity: 0.9;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin: 1.25rem 0;
+    }
+  }
+
+  .round {
+    max-width: 360px;
+    // height: 300px;
+    padding: 3rem 3rem 0.5rem 3rem;
+
+    @media screen and (min-width: 768px) {
+      max-width: 50%;
+      margin: 0;
+      height: 60vh;
+      border-radius: unset;
+      flex-grow: 2 1;
+      padding: 0;
+    }
+  }
+
+  h2 {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .heroCard {
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: center;
+      line-height: 24px;
+    }
+  }
+
+  .midContainner {
+    width: 80%;
+    
+    @media screen and (min-width: 768px) {
+      &:last-of-type {
+        margin-top: 6rem;
+        flex-direction: row;
+      }
+
+      .heroCard {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .midCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .midText {
+      @extend .midCenter;
+      @extend .heroCard;
+      width: 70%;
+      margin: 0 auto;
+
+      h2 {
+        text-align: center;
+      }
+
+      @media screen and (min-width: 768px) {
+        flex-direction: column !important;
+        display: flex;
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 3rem;
+      width: 80%;
+      margin: 6rem auto;
+      font-size: 115%;
+
+      &:nth-of-type(1) {
+        gap: 1rem;
+        justify-content: start;
+
+        h2,
+        p {
+          text-align: left;
+        }
+      }
+
+      p {
+        line-height: 2.5rem;
+      }
+
+      display: flex;
+      text-align: left;
+    }
+  }
+
+.force {
+  border-top: 2px solid rgba(119, 119, 119, 0.2);
+  padding-top: 3rem;
+  a {
+    width: 30%;
+  }
+}
+
+  .smartLock {
+    margin: 2rem 0;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      max-width: 50%;
+    }
+  }
+
+  footer {
+    margin-top: 2rem;
+    padding: 2rem 1.25rem;
+    background: #07777e;
+
+    .footerText {
+      color: #fff;
+      font-size: 1.25rem;
+    }    
+  }
+
+  .footerTextB {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footerTextC {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+// SignUp Form
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 75%;
+  margin: 4rem auto;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 2rem;
+  }
+
+  input {
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: 1px solid #06a1ab;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #06a1ab;
+    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+  }
+
+  input:focus {
+    outline: none;
+    border: 1px solid #001e1d;
+  }
+
+  button {
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 70%;
+    margin: 1.25rem auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #06a1ab;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #001e1d;
+      color: #fff;
+    }
+
+    &:active{
+      opacity: 0.9;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #777;
+  }
+
+  a {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #06a1ab;
+  }
+}
