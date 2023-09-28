@@ -1,4 +1,4 @@
-# Smart Transportation System - Frontend
+# Smart_-Repo_-Frontend
 A project based on intelligent transport systems leveraging nodejs for backend and React app for frontend
 
 ## Getting Started with Create React App
