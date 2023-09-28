@@ -7,6 +7,8 @@ import Directives from '../components/Directives';
 import Regulations from '../components/Regulations';
 import Gdpr from '../components/Gdpr';
 import Loading from '../components/Loading';
+import Privacy from '../components/Privacy';
+import Terms from '../components/Terms';
 
 const AuthenticatedRoutes = () => {
 
@@ -19,6 +21,8 @@ const AuthenticatedRoutes = () => {
         <Route path="directives" element={<Directives />} />
         <Route path="regulations" element={<Regulations />} />
         <Route path="gdpr" element={<Gdpr />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="terms-of-use" element={<Terms />} />
         <Route path="*" element={<Loading />} />
       </Route>
     </Routes>

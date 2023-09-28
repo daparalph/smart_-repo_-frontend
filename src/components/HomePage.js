@@ -7,7 +7,7 @@ import styles from './styles/homepage.module.scss';
 import frameHero from '../assets/frameHero.webp';
 import Top from './Top';
 import { BsSearch } from 'react-icons/bs';
-
+import { baseUrl } from '../baseUrl';
 
 const HomePage = () => {
   useEffect(() => {
@@ -15,20 +15,25 @@ const HomePage = () => {
       duration: 400,
       easing: 'ease-in-out',
       once: true,
-
     });
   }, []);
 
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
+  // const [showNoResults, setShowNoResults] = useState(false);
+  // const [isSearchEmpty, setIsSearchEmpty] = useState(true);
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('/search', { query });
-      setResults(response.data.results);
-    } catch (error) {
-      console.error(error);
+    if (query === '') {
+      console.log('Empty')
+    } else {
+      try {
+        const response = await axios.post(`${baseUrl}search`, { query });
+        setResults(response.data.results);
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
@@ -76,7 +81,7 @@ const HomePage = () => {
         </form>
         <ul className={`${styles.result}`}>
           {results.map((result, index) => (
-            <li key={index} className={`${styles.tList}`}>{result.title}</li>
+            <li key={index} className={`${styles.tList}`} dangerouslySetInnerHTML={{ __html: result.content }} />
           ))}
         </ul>
       </div>
@@ -135,10 +140,10 @@ const HomePage = () => {
 
     <footer>
       <small className={`${styles.footerTextB}`}>
-        <NavLink to="/" className={`${styles.footerText}`}>
+        <NavLink to="/terms-of-use" className={`${styles.footerText}`}>
           Terms of Use
         </NavLink>
-        <NavLink to="/" className={`${styles.footerText}`}>
+        <NavLink to="/privacy" className={`${styles.footerText}`}>
           Privacy Policy
         </NavLink>
         <small className={`${styles.footerTextC}`}>© 2023 SmartRepo <span>|</span> All Rights Reserved</small>

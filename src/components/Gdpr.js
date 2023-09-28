@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Loading from './Loading';
 import styles from './styles/directive.module.scss';
+import { baseUrl } from '../baseUrl';
 
 const Gdpr = () => {
   const [laws, setLaws] = useState([]);
@@ -34,7 +35,7 @@ const Gdpr = () => {
     const fetchRegulations = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:3000/regulations');
+        const response = await axios.get(`${baseUrl}regulations`);
         setLaws(response.data);
         setLoading(false);
       } catch (error) {

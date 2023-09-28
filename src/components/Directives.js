@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import styles from './styles/directive.module.scss';
 import Loading from './Loading';
 import Top from './Top';
+import { baseUrl } from '../baseUrl';
 
 const Directives = () => {
   const [directiveHTML, setDirectiveHTML] = useState([]);
@@ -45,7 +46,7 @@ const Directives = () => {
     const fetchDirectives = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:3000/directives');
+        const response = await axios.get(`${baseUrl}directives`);
         setDirectiveHTML(response.data);
         setLoading(false);
       } catch (error) {
@@ -63,10 +64,10 @@ return (
     )}
     <footer>
       <small className={`${styles.footerTextB}`}>
-        <NavLink to="/" className={`${styles.footerText}`}>
+        <NavLink to="/terms-of-use" className={`${styles.footerText}`}>
           Terms of Use
         </NavLink>
-        <NavLink to="/" className={`${styles.footerText}`}>
+        <NavLink to="/privacy" className={`${styles.footerText}`}>
           Privacy Policy
         </NavLink>
       </small>

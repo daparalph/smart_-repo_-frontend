@@ -54,10 +54,10 @@ const Home = () => {
 
       <footer>
         <small className={`${styles.footerTextB}`}>
-          <NavLink to="/" className={`${styles.footerText}`}>
+          <NavLink to="/terms-of-use" className={`${styles.footerText}`}>
             Terms of Use
           </NavLink>
-          <NavLink to="/" className={`${styles.footerText}`}>
+          <NavLink to="/privacy" className={`${styles.footerText}`}>
             Privacy Policy
           </NavLink>
         </small>

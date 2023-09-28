@@ -13,7 +13,7 @@ const SignupForm = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await instance.post('/signup', { username, email, password });
+      await instance.post('signup', { username, email, password });
       setMessage('Account created successfully!');
 
       // Clear the notification message after 3 seconds

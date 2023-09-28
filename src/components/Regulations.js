@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Loading from './Loading';
 import styles from './styles/directive.module.scss';
+import { baseUrl } from '../baseUrl';
 
 const Regulations = () => {
   const [regulations, setRegulations] = useState([]);
@@ -46,7 +47,7 @@ const Regulations = () => {
   useEffect(() => {
   const fetchRegulations = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/statutory-instrument');
+      const response = await axios.get(`${baseUrl}statutory-instrument`);
       setRegulations(response.data);
     } catch (error) {
       console.error('Error fetching regulations:', error);
@@ -58,7 +59,7 @@ const Regulations = () => {
 useEffect(() => {
   const fetchRegulations = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/explanatory-memorandum');
+      const response = await axios.get(`${baseUrl}explanatory-memorandum`);
       setMemo(response.data);
       setLoading(false);
     } catch (error) {
@@ -120,10 +121,10 @@ fetchRegulations();
       </div>
       <footer>
         <small className={`${styles.footerTextB}`}>
-          <NavLink to="/" className={`${styles.footerText}`}>
+          <NavLink to="/terms-of-use" className={`${styles.footerText}`}>
             Terms of Use
           </NavLink>
-          <NavLink to="/" className={`${styles.footerText}`}>
+          <NavLink to="/privacy" className={`${styles.footerText}`}>
             Privacy Policy
           </NavLink>
         </small>
