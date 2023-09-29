@@ -121,7 +121,7 @@ fetchRegulations();
       </div>
       <div className={`${styles.container}`}>
         <p className={`${styles.footerTextA}`}>
-          Visit the source of this page at <a href="https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-intelligent-transport-systems-eu-exit-regulations-2018" className={`${styles.footerRef}`}>EUR-LEX</a>
+          Visit the source of this page at <a href="https://www.gov.uk/eu-withdrawal-act-2018-statutory-instruments/the-intelligent-transport-systems-eu-exit-regulations-2018" className={`${styles.footerRef}`}>GOV.UK</a>
         </p>
       </div>
       <footer>
