@@ -62,6 +62,11 @@ return (
     ) : (
       <div className={`${styles.container}`} dangerouslySetInnerHTML={{ __html: directiveHTML }} data-aos="fade-up" style={{ overflow: 'hidden' }} />
     )}
+    <div className={`${styles.container}`}>
+      <p className={`${styles.footerTextA}`}>
+        Visit the source of this page at <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010L0040" className={`${styles.footerRef}`}>EUR-LEX</a>
+      </p>
+    </div>
     <footer>
       <small className={`${styles.footerTextB}`}>
         <NavLink to="/terms-of-use" className={`${styles.footerText}`}>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import Loading from './Loading';
 import styles from './styles/directive.module.scss';
 import { baseUrl } from '../baseUrl';
+import Top from './Top';
 
 const Gdpr = () => {
   const [laws, setLaws] = useState([]);
@@ -45,12 +46,31 @@ const Gdpr = () => {
   fetchRegulations();
 }, []);
 return (
-  <div className={`${styles.container}`}>
+  <div>
     {loading ? (
       <Loading />
     ) : (
-      <div dangerouslySetInnerHTML={{ __html: laws }} />
+      <div dangerouslySetInnerHTML={{ __html: laws }} className={`${styles.container}`} />
+      
     )}
+    <div className={`${styles.container}`}>
+      <p className={`${styles.footerTextA}`}>
+        Visit the source of this page at <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02016R0679-20160504" className={`${styles.footerRef}`}>EUR-LEX</a>
+      </p>
+    </div>
+    <footer>
+      <small className={`${styles.footerTextB}`}>
+        <NavLink to="/terms-of-use" className={`${styles.footerText}`}>
+          Terms of Use
+        </NavLink>
+        <NavLink to="/privacy" className={`${styles.footerText}`}>
+          Privacy Policy
+        </NavLink>
+      </small>
+
+      <small className={`${styles.footerTextC}`}>© 2023 SmartRepo</small>
+    </footer>
+    <Top />
   </div>
 );
 }
