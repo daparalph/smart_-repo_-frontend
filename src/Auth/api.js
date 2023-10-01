@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-export const URL = 'http://localhost:3000';
+export const URL = 'https://smartrepo-c2d998e29865.herokuapp.com';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://smartrepo-c2d998e29865.herokuapp.com',
 });
 
 export default api;
